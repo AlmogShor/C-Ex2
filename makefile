@@ -6,14 +6,14 @@ OBJECTS_HEADER = my_mat.h
 FLAGS = -Wall -g
 
  all: connections
-connections: $(OBJECTS_MAIN) libmy_mat.so
-	$(CC) $(FLAGS) -0 connections $(OBJECTS_MAIN) libmy_mat.a
+connections: $(OBJECTS_MAIN) libmy_mat.a
+	$(CC) $(FLAGS) -o connections $(OBJECTS_MAIN) libmy_mat.a
 
-make_static_lib: libmy_mat.a
+ make_static_lib: libmy_mat.a
 
 make_dynamic_lib: libmy_mat.so
 
-libmy_mat.a: $(OBJECTS_MY_MAT)
+ libmy_mat.a: $(OBJECTS_MY_MAT)
 	 $(AR) -rcs libmy_mat.a $(OBJECTS_MY_MAT) # creates static library
 
 libmy_mat.so: $(OBJECTS_MY_MAT)

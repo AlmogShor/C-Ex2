@@ -4,8 +4,8 @@
 void insert(int matrice[N][N]){
     for(int i=0; i<N; i++){
         for (int j = 0; j <N; j++) {
-            printf("Please enter a value to the matrice in cell [%d][%d]: ",i,j)
-            scanf("%d",matrice[i][j]);
+            printf("Please enter a value to the matrice in cell [%d][%d]: ",i,j);
+            scanf("%d",&matrice[i][j]);
         }
     }
 }
@@ -23,6 +23,7 @@ int is_there_a_route(int matrice[N][N]){
 }
 
 int  what_is_the_shortest_route(int matrice[N][N]){
+    int i,j;
     printf("Please enter the nodes you want to find the shortest path for: ");
     scanf("%d %d\n",&i,&j);
     return matrice[i][j];

@@ -3,13 +3,13 @@
 #include "my_mat.h"
 
 
-int N;
-int our_matrice[N][N];
+
 
 int main() {
-    int run = 1,route_found=-1,shortest_path=INT_MAX;
+    int run = 1,route_found=-1,short_path=INT_MAX;
     char action = 'D';
     int shortest_path[N][N];
+    int our_matrice[N][N];
     while (run) {
         printf("There are four option right now:\n A-insert values into the Matrice\n B- Find if there is a route from point X to point Y\n C - Find shortest path between point X to point Y\n D- Exit\nPlease Enter which action would you like to preform:");
         scanf("%c", &action);
@@ -35,12 +35,12 @@ int main() {
                 }
             } else {
                 if (action == 'C' || action == 'c') {
-                    shortest_path = what_is_the_shortest_route(shortest_path); // Function no. 3 in the assignment
-                    if(shortest_path==INT_MAX){
+                    short_path = what_is_the_shortest_route(shortest_path); // Function no. 3 in the assignment
+                    if(short_path==INT_MAX){
                         printf("-1");
                     }
                     else{
-                        printf("%d",shortest_path);
+                        printf("%d",short_path);
                     }
                 }
             }
@@ -53,7 +53,7 @@ void helper(int matrice[N][N], int shortest_path[N][N]){
     for ( i = 0; i < N; i++) {
         for (j = 0; j < N; j++) {
     shortest_path[i][j] = matrice[i][j];
-            if(our_matrice[i][j]==0){
+            if(matrice[i][j]==0){
                 shortest_path[i][j]= INT_MAX;
             }
         }
