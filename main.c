@@ -28,7 +28,8 @@ int main() {
                 }
 //                if (route_found == -1) {
 //                    printf("Error");
-                } else {
+//                }
+                else {
                     printf("False");
                 }
             } else {
