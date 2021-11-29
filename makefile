@@ -14,7 +14,7 @@ make_static_lib: libmy_mat.a
 make_dynamic_lib: libmy_mat.so
 
 libmy_mat.a: $(OBJECTS_MY_MAT)
-	 $(AR) -rcs libmy_mat.a $(OBJECTS_MY_MAT) # creates static library
+	$(AR) -rcs libmy_mat.a $(OBJECTS_MY_MAT) # creates static library
 
 libmy_mat.so: $(OBJECTS_MY_MAT)
 	$(CC) $(FLAGS) -shared -o libmy_mat.so $(OBJECTS_MY_MAT)  # creates dynamic library

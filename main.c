@@ -5,7 +5,7 @@
 int matrix[N][N];
 
 int main() {
-    int run = 1, route_found = -1, short_path = INT_MAX;
+    int run = 1, route_found, short_path = INT_MAX;
     char action = 'D';
     int shortest_path[N][N];
     while (run) {
@@ -24,26 +24,27 @@ int main() {
             if (action == 'B' || action == 'b') {
                 route_found = is_there_a_route(shortest_path); // Function no. 2 in the assignment
                 if (route_found == 1) {
-                    printf("True");
+                    printf("True\n");
                 }
 //                if (route_found == -1) {
 //                    printf("Error");
 //                }
                 else {
-                    printf("False");
+                    printf("False\n");
                 }
             } else {
                 if (action == 'C' || action == 'c') {
                     short_path = what_is_the_shortest_route(shortest_path); // Function no. 3 in the assignment
                     if (short_path == INT_MAX) {
-                        printf("-1");
+                        printf("-1\n");
                     } else {
-                        printf("%d", short_path);
+                        printf("%d\n", short_path);
                     }
                 }
             }
         }
     }
+    return 0;
 }
 
 void calc_matrix(int shortest_path[N][N]) {
