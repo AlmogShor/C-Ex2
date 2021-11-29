@@ -58,9 +58,8 @@ void calc_matrix() {
 }
 
 int min(int a, int b) {
-    if (a < b) {
-        return (a);
-    } else {
-        return (b);
+    if (a == 0) {
+        return b;
     }
+    return (a < b) ? a : b;
 }
