@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-void insert(int matrix[N][N]) {
+void insert(int matrix[N][N]) { // get input matrix from user
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             scanf("%d", &matrix[i][j]);

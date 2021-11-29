@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-int matrix[N][N];
+int matrix[N][N]; // input matrix
 int shortest_path[N][N];
 
 int main() {
@@ -16,9 +16,8 @@ int main() {
         } else if (action == 'A') {
             insert(matrix); // Function no. 1 in the assigment
         } else {
-            // This calculating the shortest path - should it be in different location in the program??
-            calc_matrix();
-            if (action == 'B') {
+            calc_matrix(); // calculating the shortest path
+            if (action == 'B') { // Function no. 2 in the assigment
                 is_there_a_route(shortest_path) ? printf("True\n") : printf("False\n");
             } else if (action == 'C') { // Function no. 3 in the assignment
                 len_path = what_is_the_shortest_route(shortest_path);
@@ -38,6 +37,7 @@ void calc_matrix() {
             prev_mat[i][j] = matrix[i][j];
         }
     }
+    // Dynamic programming: Floyd–Warshall algorithm
     for (k = 0; k < N; k++) {
         for (i = 0; i < N; i++) {
             for (j = 0; j < N; j++) {
