@@ -9,8 +9,8 @@ int main() {
     char action = 'D';
     int shortest_path[N][N];
     while (run) {
-        printf("There are four option right now:\n A-insert values into the matrix\n B- Find if there is a route from point X to point Y\n "
-               "C - Find shortest path between point X to point Y\n D- Exit\nPlease Enter which action would you like to preform:");
+//        printf("There are four option right now:\n A-insert values into the matrix\n B- Find if there is a route from point X to point Y\n "
+//               "C - Find shortest path between point X to point Y\n D- Exit\nPlease Enter which action would you like to preform:");
         scanf("%c", &action);
         if (action == 'D' || action == 'd') {
             run = 0; // Stop running. Function no. 4 in the assignment
@@ -26,8 +26,8 @@ int main() {
                 if (route_found == 1) {
                     printf("True");
                 }
-                if (route_found == -1) {
-                    printf("Error");
+//                if (route_found == -1) {
+//                    printf("Error");
                 } else {
                     printf("False");
                 }
