@@ -8,18 +8,20 @@ int main() {
     int run = 1, len_path;
     char action = 'D';
     while (run) {
-//        printf("There are four option right now:\n A-insert values into the matrix\n B- Find if there is a route from point X to point Y\n "
-//               "C - Find the shortest path between point X to point Y\n D- Exit\nPlease Enter which action would you like to preform:");
+        // action A: insert values into the matrix
+        // action B: check if there is a route between two nodes (boolean)
+        // action C: find the shortest path between two nodes (int)
+        // action D: exit the program
         scanf("%c", &action);
         if (action == 'D') {
-            run = 0; // Stop running. Function no. 4 in the assignment
+            run = 0;
         } else if (action == 'A') {
-            insert(matrix); // Function no. 1 in the assigment
+            insert(matrix);
         } else {
-            calc_matrix(); // calculating the shortest path
-            if (action == 'B') { // Function no. 2 in the assigment
+            calc_matrix(); // calculate the shortest path
+            if (action == 'B') {
                 is_there_a_route(shortest_path) ? printf("True\n") : printf("False\n");
-            } else if (action == 'C') { // Function no. 3 in the assignment
+            } else if (action == 'C') {
                 len_path = what_is_the_shortest_route(shortest_path);
                 len_path ? printf("%d\n", len_path) : printf("-1\n");
             }
